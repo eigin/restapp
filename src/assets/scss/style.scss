@@ -1,0 +1,244 @@
+@import "./assets/scss/var";
+
+body {
+  background: $main_background_color;
+  color: $page_color;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.container {
+  background: $page_background_color;
+  max-width: $max_width;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
+.content {
+  padding: 0 2.5em;
+}
+
+.navbar {
+  background: $page_background_color;
+  height: 100px;
+  width: 1280px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.55);
+  position: relative;
+
+  .title {
+    text-transform: uppercase;
+    font-size: 2em;
+    font-weight: 200;
+    color: $active_color;
+    padding: 1.2em 0 0 2em;
+  }
+
+  .right {
+    float: right;
+  }
+
+}
+
+.button {
+  font-family: IBM Plex Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+  text-transform: capitalize;
+
+  display: inline-block;
+  padding: .3em 1em;
+  margin-right: 1em;
+  border: 1px double;
+  border-radius: 1em;
+  user-select: none;
+  cursor: pointer;
+
+  &.active {
+    color: $active_color;
+  }
+
+  &:hover {
+    color: $active_color;
+  }
+
+  &.main {
+    display: block;
+    width: fit-content;
+    margin-bottom: 1.5em;
+  }
+}
+
+.sort_letter {
+  text-transform: uppercase;
+  font-size: 20px;
+  line-height: 28px;
+  display: inherit;
+  user-select: none;
+  padding: .5em;
+}
+
+.sort {
+  position: absolute;
+  left: 75%;
+  top: 0;
+  margin: .5em;
+  display: flex;
+}
+
+.favourites {
+  cursor: pointer;
+  position: absolute;
+  left: 79%;
+  top: 37%;
+  margin: .5em;
+  &:hover {
+    color: $active_color;
+  }
+}
+
+.setting {
+  position: relative;
+}
+
+.mainview {
+  width: 1160px;
+  height: 513px;
+  border-radius: 8px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.preview {
+  width: 367px;
+  height: 290px;
+  border-radius: 8px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.breed {
+    position:absolute;
+    z-index: 1000;
+    top: 85%;
+    width: 100%;
+    .name {
+      color: $second_color;
+      text-align: right;
+      text-transform: capitalize;
+      font-size: 28px;
+      padding-right: 1em;
+    }
+}
+
+.gradient {
+	display: inline-block;
+	position: relative;
+	line-height: 0;
+  border-radius: 8px;
+  margin: 1em;
+}
+.gradient:after {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 100%;
+  border-radius: 8px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: transparent;
+	background-image: linear-gradient(to bottom, rgba(0,0,0,0), #000000);
+	opacity: 0.8;
+}
+
+.breeds_open {
+  color: $second_color;
+  border-bottom: .5px dashed;
+  display: block;
+  width: fit-content;
+  user-select: none;
+  cursor: pointer;
+  margin-left: 1em;
+
+  font-family: IBM Plex Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 0.01em;
+}
+
+.like-block {
+    position:absolute;
+    z-index: 1000;
+    width: 100%;
+    top: 15%;
+    text-align: left;
+    font-size: 34px;
+    padding-left: 1em;
+    cursor: pointer;
+    color: $second_color;
+    &:hover {
+      color: $active_color;
+    }
+    .onlike {
+      color: $onlike_color;
+    }
+}
+
+.toggle-button {
+  position: relative;
+
+  width: 34px;
+  height: 18px;
+  margin: 0;
+
+  vertical-align: top;
+
+  background: $page_background_color;
+  border: 1px solid $page_color;
+  border-radius: 11px;
+  outline: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  transition: all 0.4s cubic-bezier(0.21, 0.84, 0.31, 1.22);
+}
+
+.toggle-button::after {
+  content: "";
+
+  position: absolute;
+  left: 2px;
+  top: 2px;
+
+  width: 12px;
+  height: 12px;
+  background-color: $page_color;
+  border-radius: 50%;
+  transform: translateX(0);
+  transition: all 0.3s cubic-bezier(0.2, 0.85, 0.32, 1.2);
+}
+
+.toggle-button:checked::after {
+  transform: translateX(calc(100% + 3px));
+  background-color: #fff;
+}
+
+.toggle-button:checked {
+  background-color: $page_background_color;
+}
+
+.container_but {
+  display: flex;
+  margin-left: 1em;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
