@@ -24,11 +24,11 @@ https://www.figma.com/file/xKCYI066offeYO3qTLByoP/TZ
 - Общие требования
 
 # основные требования
-Верстка точно по макету без использования css-фреймворков
-Использование ESLint (standard) обязательно
-Вся логика работы с API находится во Vuex
-Допустимые к использованию библиотеки только vue, vuex, vue-router, axios
-Верстка на SCSS, JS на синтаксисе ES6+
+- Верстка точно по макету без использования css-фреймворков
+- Использование ESLint (standard) обязательно
+- Вся логика работы с API находится во Vuex
+- Допустимые к использованию библиотеки только vue, vuex, vue-router, axios
+- Верстка на SCSS, JS на синтаксисе ES6+
 
 
 ### Compiles and hot-reloads for development or production
@@ -36,5 +36,7 @@ https://www.figma.com/file/xKCYI066offeYO3qTLByoP/TZ
 npm install
 
 npm run serve
+
 or
+
 npm run build
