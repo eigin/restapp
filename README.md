@@ -1,5 +1,3 @@
-# Тестовое задание / VUE
-
 # Цель:
 - Разработать SPA-приложение с использованием Vue + Vuex + Vue router.
 - Приложение должно получать данные из API и выводить их в клиентскую часть.
@@ -36,7 +34,5 @@ https://www.figma.com/file/xKCYI066offeYO3qTLByoP/TZ
 npm install
 
 npm run serve
-
 or
-
 npm run build
