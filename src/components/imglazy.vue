@@ -54,6 +54,7 @@ export default {
       // поставили лайк
       if (img.like) {
         liked = JSON.parse(localStorage.getItem("liked"));
+        if(!liked) liked = [];
         liked.push({ breed: img.breed, url: img.url, like: true });
         localStorage.setItem("liked", JSON.stringify(liked));
         // сняли лайк
